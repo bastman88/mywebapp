@@ -35,11 +35,10 @@ public class LoginController {
 
 
 	
-	public boolean checkUsername(@ModelAttribute("loginBean") LoginBean loginBean) {
+	public boolean checkUsername(String UserName,String password) {
 		boolean result =false;
-		if (loginBean != null && loginBean.getUserName() != null) {
-			String username = loginBean.getUserName();
-			if(username.length() == 6)
+		if (UserName != null && password != null) {
+			if(UserName.equals("devops") && password.equals("devops123"))
 			{
 				result = true;
 			}
@@ -51,10 +50,10 @@ public class LoginController {
 		return result;
 	}
 	
-	public boolean checkPasswordLength(@ModelAttribute("loginBean") LoginBean loginBean) {
+	public boolean checkPasswordLength(String password) {
 		boolean result =false;
-		if (loginBean.getPassword() != null) {
-			String password = loginBean.getPassword();
+		if (password != null) {
+		
 			if(password.length() > 6)
 			{
 				result = true;
@@ -85,12 +84,11 @@ public class LoginController {
 		return result;
 	}
 	
-	public boolean checkNumber(@ModelAttribute("loginBean") LoginBean loginBean) {
+	public boolean checkNumber(String password) {
 		boolean result =false;
 		int count=0;
 		char ch;
-		if (loginBean.getPassword() != null) {
-			String password = loginBean.getPassword();
+		if (password != null) {			
 			for(int i=0;i < password.length();i++) {
 		        ch = password.charAt(i);
 		        if(Character.isUpperCase(ch))
