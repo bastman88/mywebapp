@@ -1,9 +1,11 @@
-package com.spring.controller;
+package com.spring.controller.unitTests;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
+
+import com.spring.controller.LoginController;
 
 public class LoginControllerTest {
 

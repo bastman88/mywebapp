@@ -1,11 +1,13 @@
-package com.spring.controller;
+package com.spring.controller.unitTests;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-public class LoginPasswordTest {
+import com.spring.controller.LoginController;
+
+public class LoginPassword1Test {
 
 	@Before
 	public void setUp() throws Exception {
@@ -18,7 +20,7 @@ public class LoginPasswordTest {
 	@Test
 	public void test() {
 		LoginController login =	Mockito.mock(LoginController.class);
-		Mockito.when(login.checkPasswordLength("devops123")).thenReturn(true);
+		Mockito.when(login.checkNumber("devops")).thenReturn(true);
 	}
 
 }
