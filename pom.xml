@@ -3,8 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.spring</groupId>
-	<artifactId>mywebapp</artifactId>
-	<name>mywebapp</name>
+	<artifactId>Spring-MVC-LoginForm</artifactId>
+	<name>Spring-MVC-LoginForm</name>
 	<packaging>war</packaging>
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
@@ -108,7 +108,7 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>        
-		<!-- JUnit/Selenium -->
+		<!-- Testing -->
 		<dependency>				
              <groupId>junit</groupId>								
              <artifactId>junit</artifactId>								
@@ -132,6 +132,12 @@
             <version>2.31.0</version>								
             <scope>test</scope>							  			
         </dependency>	
+        <dependency>
+    		<groupId>org.mockito</groupId>
+    		<artifactId>mockito-all</artifactId>
+    		<version>1.10.19</version>
+    		<scope>test</scope>
+		</dependency>
 	</dependencies>
     <build>
         <plugins>
