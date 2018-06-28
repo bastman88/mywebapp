@@ -1,4 +1,4 @@
-package com.spring.controller;
+package com.spring.controller.junitTests;
 
 import static org.junit.Assert.*;
 
@@ -6,6 +6,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.ui.Model;
+
+import com.spring.controller.LoginBean;
+import com.spring.controller.LoginController;
 
 public class LoginControllerTest  {
 	
@@ -27,12 +30,10 @@ public class LoginControllerTest  {
 
 	@Test
 	public void testSubmit() {
-	
 		LoginBean loginBean = new LoginBean();
-	LoginController login = new LoginController();
-	String result = login.submit(model,loginBean);
-	assertEquals("success",result);
-		
+		LoginController login = new LoginController();
+		String result = login.submit(model,loginBean);
+		assertEquals("success",result);
 	}
 
 }

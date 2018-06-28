@@ -1,4 +1,4 @@
-package com.spring.controller;
+package com.spring.controller.junitTests;
 
 import static org.junit.Assert.*;
 
@@ -6,7 +6,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class LoginCheckUsername {
+import com.spring.controller.LoginBean;
+import com.spring.controller.LoginController;
+
+public class LoginPassword1Test {
 
 	@Before
 	public void setUp() throws Exception {
@@ -20,8 +23,8 @@ public class LoginCheckUsername {
 	public void test() {
 		LoginBean loginBean = new LoginBean();
 		LoginController login = new LoginController();
-		boolean result = login.checkUsername(loginBean);
-		assertEquals(true,result);
+		boolean result = login.checkPassword(loginBean);
+		assertEquals(false,result);
 	}
 
 }
