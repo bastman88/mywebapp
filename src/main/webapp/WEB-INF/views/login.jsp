@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Spring Login Form Test</title>
+<title>Spring Login Form </title>
 </head>
 <body>
 	<form:form name="submitForm" method="POST">
